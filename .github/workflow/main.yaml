@@ -26,7 +26,7 @@ jobs:
 
     - name: Push Docker image to Container Registry
       run: |
-        echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin    
+        echo ${{ secrets.DOCKERHUB_PASSWORD }}  docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin    
         docker tag  fastapi-app/Docker_Github__cicd-
         docker push shubhamk682/docker_file:fastapi-app/Docker_Github__cicd-
        

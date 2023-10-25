@@ -10,9 +10,13 @@ uses: actions/setup-python@v2
 
     - name: Push Docker image to Container Registry
       run: |
-        echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-        docker tag fastapi-app ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-app:latest
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-app:latest
+        echo ${{ secrets.dckr_pat_htPGRMVPqHg5owadFOZEBHOjQpw }} | docker login -u ${{ secrets.Docks }} --password-stdin
+        docker tag fastapi-app ${{ secrets.DOCKERHUB_USERNAME }}/shubhamk682
+/
+Docker_Github__cicd-
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/shubhamk682
+/
+Docker_Github__cicd-
 
   deploy:
     needs: build

@@ -11,8 +11,8 @@ uses: actions/setup-python@v2
     - name: Push Docker image to Container Registry
       run: |
         echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-        docker tag Docker_Github__cicd- ${{ secrets.DOCKERHUB_USERNAME }}/Docker_Github__cicd-:latest
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/Docker_Github__cicd-:latest
+        docker tag shubhamk682- ${{ secrets.DOCKERHUB_USERNAME }}/shubhamk682-:latest
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/shubhamk682-:latest
 
   deploy:
     needs: build
